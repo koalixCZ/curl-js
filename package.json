@@ -1,0 +1,16 @@
+{
+	"name": "curl-js",
+	"version": "0.0.1",
+	"main": "curl.js",
+	"dependencies": {
+		"fs-extra": "^0.26.7",
+		"request": "^2.69.0"
+	},
+	"devDependencies": {
+		"eslint": "^2.7.0",
+		"jasmine": "^2.4.1"
+	},
+	"author": "koalix",
+	"license": "MIT",
+	"scripts": {}
+}
