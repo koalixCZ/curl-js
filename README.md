@@ -15,9 +15,14 @@ There is no configuration needed.
 You can run the script from a code:
 
 ``` javascript
-var curl = require("curl");
+var curljs = require("curl-js");
 
-curl(destination, source, callback); 
+curljs.curl(destination, source, function (err) {
+    if (err) {
+        return;
+    }
+    // do some stuff
+}); 
 ```
 
     - destination - path where to save the downloaded file 
@@ -26,3 +31,20 @@ curl(destination, source, callback);
 
 ## What next?
 If you have a problem, write me.
+
+### Download to string
+Sometimes you appreciate to have a file content in a string
+
+``` javascript
+var curljs = require("curl-js");
+
+curljs.curlToString(destination, source, (function (err, content) {
+    if (err) {
+        return;    
+    }
+    // do some stuff
+}); 
+```
+
+    - source - URL address
+    - callback - function which is invoked when the file has been downloaded
